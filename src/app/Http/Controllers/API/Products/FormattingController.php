@@ -5,7 +5,6 @@ namespace Quidmye\ProductsEndpoint\App\Http\Controllers\API\Products;
 use App\Http\Controllers\Controller;
 use Quidmye\ProductsEndpoint\App\Http\Requests\Products\ProductsFormattingRequest;
 use Quidmye\ProductsEndpoint\App\Jobs\Products\CreateYMLFile;
-use Quidmye\ProductsEndpoint\App\Models\Products\ProductsCategory;
 use Quidmye\ProductsEndpoint\App\Models\Products\ProductsFormatting;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
@@ -19,16 +18,7 @@ class FormattingController extends Controller
             $formatter = ProductsFormatting::create([
                 'status' => ProductsFormatting::STATUS_NEW
             ]);
-            $formatter->products()->createMany(array_map(function ($data){
-                $category = ProductsCategory::firstOrCreate(['name' => $data['category']]);
-                return [
-                    'name' => $data['name'],
-                    'image_path' => $data['image'],
-                    'price' => $data['price'],
-                    'category_id' => $category->id
-                ];
-            }, $data));
-            CreateYMLFile::dispatch($formatter);
+            CreateYMLFile::dispatch($formatter, $data);
             return response()->json([
                 'link' => route('format.check', [
                     'id' => $formatter->id

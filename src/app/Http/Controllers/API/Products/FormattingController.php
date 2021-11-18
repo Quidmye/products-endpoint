@@ -5,8 +5,8 @@ namespace Quidmye\ProductsEndpoint\App\Http\Controllers\API\Products;
 use App\Http\Controllers\Controller;
 use Quidmye\ProductsEndpoint\App\Http\Requests\Products\ProductsFormattingRequest;
 use Quidmye\ProductsEndpoint\App\Jobs\Products\CreateYMLFile;
-use App\Models\Products\ProductsCategory;
-use App\Models\Products\ProductsFormatting;
+use Quidmye\ProductsEndpoint\App\Models\Products\ProductsCategory;
+use Quidmye\ProductsEndpoint\App\Models\Products\ProductsFormatting;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 

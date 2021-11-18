@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
     'prefix' => 'api',
-    'namespace' => 'App\Http\Controllers\API'
+    'namespace' => 'Quidmye\ProductsEndpoint\App\Http\Controllers\API'
 ], function () {
     Route::group([
         'prefix' => 'v1'

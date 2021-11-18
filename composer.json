@@ -1,0 +1,27 @@
+{
+    "name": "quidmye/products-endpoint",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Quidmye\\ProductsEndpoint\\": "src/",
+            "Quidmye\\ProductsEndpoint\\App\\": "src/app",
+            "Quidmye\\ProductsEndpoint\\Providers\\": "src/providers"
+        }
+    },
+    "authors": [
+        {
+            "name": "Denis Koltsov",
+            "email": "markmaquire@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+
+            ]
+        }
+    }
+}

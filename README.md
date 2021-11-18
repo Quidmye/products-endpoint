@@ -34,3 +34,9 @@ RESPONSE:
     "link": "https://example.app/storage/products/ymls/1.yml"
 }
 ```
+
+
+BASIC TEST:
+```angular2html
+php artisan test vendor/quidmye/products-endpoint
+```

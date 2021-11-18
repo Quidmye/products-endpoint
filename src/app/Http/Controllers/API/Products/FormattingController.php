@@ -46,9 +46,9 @@ class FormattingController extends Controller
     }
 
     public function check($id){
-        try {
-            $formatter = ProductsFormatting::findOrFail($id);
+        $formatter = ProductsFormatting::findOrFail($id);
 
+        try {
             if($formatter->status === ProductsFormatting::STATUS_FAILED){
                 return response()->json([
                     'error' => 'Произошла ошибка'

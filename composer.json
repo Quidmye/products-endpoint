@@ -16,7 +16,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": "^7.2.5|^8.0",
+        "laravel/framework": "^7.29"
+    },
     "extra": {
         "laravel": {
             "providers": [

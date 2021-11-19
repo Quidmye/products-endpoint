@@ -9,7 +9,7 @@ Then run the command
 php artisan migrate
 ```
 
-#ENDPOINTS
+# ENDPOINTS
 
 POST: https://example.app/api/v1/format/
 PARAMS: 
@@ -36,7 +36,8 @@ RESPONSE:
 ```
 
 
-BASIC TEST:
+# BASIC TEST
+
 ```angular2html
 php artisan test vendor/quidmye/products-endpoint
 ```
